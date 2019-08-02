@@ -1,35 +1,22 @@
 package com.example.talker.blackjack;
-
-/**
- * Created by Talker on 11/04/2015.
- **/
 import java.util.Vector;
 
-class Hand
-{
+class Hand{
     private Vector<Card> hand;
     private boolean ace;
 
-    Hand(){
-        hand = new Vector<>();
-    }
+    Hand(){ hand = new Vector<>(); }
 
-    void clear(){
-        hand.removeAllElements();
-    }
+    void clear(){ hand.removeAllElements(); }
 
-    Card removeCard(){
-        return hand.remove(0);
-    }
+    Card removeCard(){ return hand.remove(0); }
 
     void addCard(Card card){
         if(card != null)
             hand.addElement(card);
     }
 
-    int getCardCount(){
-        return hand.size();
-    }
+    int getCardCount(){ return hand.size(); }
 
     Card getCard(int position) {
         if(position >= 0 && position < hand.size())
@@ -58,8 +45,5 @@ class Hand
         return handValue;
     }
 
-    private void setAce(boolean ace){
-        this.ace = ace;
-    }
+    private void setAce(boolean ace){ this.ace = ace; }
 }
-
