@@ -1,10 +1,6 @@
 package com.example.talker.blackjack;
 
-/**
- * Created by Talker on 11/04/2015.
- */
-public class Card
-{
+public class Card{
     final static int CLUBS = 0, SPADES = 1, HEARTS = 2, DIAMONDS = 3;
     private final int value;
     private final int suit;
@@ -15,13 +11,10 @@ public class Card
     }
 
 
-    int getValue(){
-        return value;
-    }
+    int getValue(){ return value; }
 
     char getSuitAsChar(){
-        switch (suit)
-        {
+        switch (suit){
             case CLUBS:    return 'c';
             case SPADES:   return 's';
             case HEARTS:   return 'h';
@@ -31,7 +24,7 @@ public class Card
     }
 
     private String getValueAsString(){
-        switch (value) {
+        switch(value){
             case 1:   return "1";
             case 2:   return "2";
             case 3:   return "3";
@@ -49,7 +42,5 @@ public class Card
         }
     }
 
-    public String toString(){
-        return getSuitAsChar() + getValueAsString();
-    }
+    public String toString(){ return getSuitAsChar() + getValueAsString(); }
 }
