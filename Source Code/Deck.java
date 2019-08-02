@@ -1,10 +1,6 @@
 package com.example.talker.blackjack;
 
-/**
- * Created by Talker on 11/04/2015.
- **/
-class Deck
-{
+class Deck{
     private Card [] deck;
     private int cardsUsed;
 
@@ -30,9 +26,7 @@ class Deck
         cardsUsed = 0;
     }
 
-    int cardsLeft(){
-        return 52 - cardsUsed;
-    }
+    int cardsLeft(){ return 52 - cardsUsed; }
 
     Card dealCard(){
         if (cardsUsed == 52){
@@ -43,4 +37,3 @@ class Deck
         return deck[cardsUsed - 1];
     }
 }
-
